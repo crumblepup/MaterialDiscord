@@ -1,0 +1,255 @@
+/**
+* @name Material Purple Discord
+* @author oxmc7769 and localizations
+* @version 1.0
+* @description A custom theme for Vencord, based on the MaterialDiscord theme.
+*/
+
+/**
+*  Custom Themes
+**/
+
+/* Material Discord Theme */
+@import url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/source.css);
+
+/* Material You Addon */
+@import url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/addons/material-you/source.css);
+
+/**
+*  Custom Fonts
+**/
+
+/* Old discord font */
+@import url(https://cdn.jsdelivr.net/gh/BowDown097/RevertDiscordFont/font.css);
+
+/* Custom font (Ubuntu Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Custom font (Poetsen One) */
+@import url(https://cdn.oxmc.me/assets/fonts/Poetsen_One/font.css);
+
+/* Font Order */
+:root {
+    --app-font: 'Ubuntu Sans', 'Google Sans', 'Whitney', sans-serif !important;
+}
+
+/**
+*  Addons
+**/
+
+/* Indicators */
+@import url("https://discord-extensions.github.io/modern-indicators/src/source.css");
+
+/**
+*  Options
+**/
+
+/* Material You Settings */
+:root {
+    /* Purple hue :3 */
+    --accent-hue: 280;
+    --accent-saturation: 71%;
+    --accent-lightness: 61%;
+
+    --accent-text-color: #fff;
+}
+
+.theme-dark {
+    --saturation-modifier: 0.175;
+    --lightness-modifier: 0.2;
+}
+
+.theme-light {
+    --saturation-modifier: 0.175;
+    --lightness-modifier: 2.175;
+}
+
+/* Titlebar name */
+.wordmark__5b8c9.wordmarkWindows_ffbc5e {
+    font-family: 'Poetsen One' !important;
+}
+
+.wordmark__5b8c9.wordmarkWindows_ffbc5e:before {
+    content: "MaterialPurple";
+    font-weight: 600;
+}
+
+.wordmark__5b8c9.wordmarkWindows_ffbc5e:after {
+    content: "Discord";
+}
+
+/* Adjust formatted text line-height */
+[class*="messageContent-"i] {
+    line-height: var(--message-line-spacing, initial) !important;
+}
+
+/* Adjust formatted text line-height */
+[class*="messageContent-"i] {
+    line-height: var(--message-line-spacing, initial) !important;
+}
+
+/* All items that are not code or hljs */
+*:not([class*="hljs"])*:not([class*="shiki-lang"]):not(code) {
+    font-style: var(--Font-Style) !important;
+    font-weight: var(--Font-Weight) !important;
+    font-variant: var(--Font-Variant) !important;
+}
+
+/* markup elements */
+.markup:not(code) {
+    font-size: var(--Font-Size) !important;
+}
+
+/* Unread message (bottom) */
+div[class="unreadMentionsIndicatorBottom__9351c"] div[class="bar_edc096 unreadMentionsBar__8cd45 mention_dd733a active_e695d6"] span[class="text__50a62"] {
+    font-family: 'Poetsen One' !important;
+}
+
+/* Unread message (top) */
+div[class="unreadMentionsIndicatorTop__153ad"] div[class="bar_edc096 unreadMentionsBar__8cd45 mention_dd733a active_e695d6"] span[class="text__50a62"] {
+    font-family: 'Poetsen One' !important;
+}
+
+/* New message */
+div[class="unreadPill__1b4fa endCap__95d53"] {
+    font-family: 'Poetsen One' !important;
+}
+
+/* ping badge on user */
+div[class="lowerBadge_e89e22"] div[class="numberBadge__40d6f base__5ed84 eyebrow_c15ff6 baseShapeRound_c1de89"] {
+    font-family: 'Poetsen One' !important;
+}
+
+/* Custom loading image */
+div[class="content_de05de"] {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    animation: none;
+    z-index: 1;
+    /* Windows 11 style */
+    /* background-image: url("http://i.imgur.com/p543mwo.gif"); */
+    /* Dancing toothless dragon :3 */
+    background-image: url("https://cdn.oxmc.me/uploads/images/toothless-dragon-toothless.gif");
+}
+
+div[class="tip__6e299"]>* {
+    content: "Help";
+}
+
+div[class="content_de05de"]>* {
+    display: none;
+}
+
+/* Custom user badges (used for friends, replace "user-handle" with the user you'd like the badge on) */
+[aria-label="user-handle"] .badgeList-2aoHPw::after,
+[aria-label="user-handle"] .profileBadges__1f2ab::before,
+[aria-label="user-handle"] .badges-XRnWAp::after,
+[aria-label="user-handle"] .badgeList-2aoHPw::after,
+[aria-label="user-handle"] .profileBadges__1f2ab::before,
+[aria-label="user-handle"] .badges-XRnWAp::after,
+[aria-label="user-handle"] .badgeList-2aoHPw::after,
+[aria-label="user-handle"] .profileBadges__1f2ab::before,
+[aria-label="user-handle"] .badges-XRnWAp::after {
+    content: "";
+    position: relative;
+    right: 0px;
+    top: 0px;
+    width: 22px;
+    height: 22px;
+    background: url(https://static-00.iconduck.com/assets.00/red-heart-emoji-512x470-p3ffpmmg.png) center / 100% 100%;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+[aria-label="user-handle"] .profileBadges__1f2ab:hover::after,
+[aria-label="user-handle"] .profileBadges__1f2ab:hover::after,
+[aria-label="user-handle"] .profileBadges__1f2ab:hover::after {
+    content: "Cool Friend :3";
+    position: absolute;
+    display: flex;
+    color: var(--text-normal);
+    font-weight: 600;
+    font-size: 10pt;
+    z-index: 999;
+    transform: translateY(-40px) translateX(10px);
+    padding: 10px 12px;
+    border-radius: 4px;
+    box-shadow: var(--elevation-high);
+    background-color: var(--background-floating);
+}
+
+/* Theme Creator Badge */
+.repliedMessage__636d2:has([src*="1113581633711390720"]) .username__0b0e7,
+.member_aa4760:has([src*="1113581633711390720"]) .username_d272d6,
+.contents_d3ae0d:has([src*="1113581633711390720"]) .username__0b0e7,
+.link__3a950:has([src*="1113581633711390720"]) .overflow__993fa,
+.children_cde9af:has([src*="1113581633711390720"]) .titleWrapper_d6133e > h1 > div {
+    color: rgb(255, 255, 255) !important;
+    transition: filter .1s ease-in-out;
+    text-shadow: 
+    1px 1px 4px #a989ff,
+    -1px -1px 4px #47b5ff,
+    1px -1px 4px #a989ff,
+    -1px 1px 4px #ffae34;
+}
+
+.children_cde9af:has([src*="1113581633711390720"]) .overflow__993fa,
+.children_cde9af:has([src*="1113581633711390720"]) .headerText_bd68ec,
+.children_cde9af:has([src*="1113581633711390720"]) .username__267df,
+.children_cde9af:has([src*="1113581633711390720"]) .titleWrapper_d6133e>h1>div,
+.contents_d3ae0d:has([src*="1113581633711390720"]) .overflow__993fa,
+.contents_d3ae0d:has([src*="1113581633711390720"]) .headerText_bd68ec,
+.contents_d3ae0d:has([src*="1113581633711390720"]) .username__267df,
+.contents_d3ae0d:has([src*="1113581633711390720"]) .titleWrapper_d6133e>h1>div,
+.link__3a950:has([src*="1113581633711390720"]) .overflow__993fa,
+.link__3a950:has([src*="1113581633711390720"]) .headerText_bd68ec,
+.link__3a950:has([src*="1113581633711390720"]) .username__267df,
+.link__3a950:has([src*="1113581633711390720"]) .titleWrapper_d6133e>h1>div,
+.userInfo__83819:has([src*="1113581633711390720"]) .overflow__993fa,
+.userInfo__83819:has([src*="1113581633711390720"]) .headerText_bd68ec,
+.userInfo__83819:has([src*="1113581633711390720"]) .username__267df,
+.userInfo__83819:has([src*="1113581633711390720"]) .titleWrapper_d6133e>h1>div {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.children_cde9af:has([src*="1113581633711390720"]) .overflow__993fa:after,
+.children_cde9af:has([src*="1113581633711390720"]) .headerText_bd68ec:after,
+.children_cde9af:has([src*="1113581633711390720"]) .username__267df:after,
+.children_cde9af:has([src*="1113581633711390720"]) .titleWrapper_d6133e>h1>div:after,
+.contents_d3ae0d:has([src*="1113581633711390720"]) .overflow__993fa:after,
+.contents_d3ae0d:has([src*="1113581633711390720"]) .headerText_bd68ec:after,
+.contents_d3ae0d:has([src*="1113581633711390720"]) .username__267df:after,
+.contents_d3ae0d:has([src*="1113581633711390720"]) .titleWrapper_d6133e>h1>div:after,
+.link__3a950:has([src*="1113581633711390720"]) .overflow__993fa:after,
+.link__3a950:has([src*="1113581633711390720"]) .headerText_bd68ec:after,
+.link__3a950:has([src*="1113581633711390720"]) .username__267df:after,
+.link__3a950:has([src*="1113581633711390720"]) .titleWrapper_d6133e>h1>div:after,
+.userInfo__83819:has([src*="1113581633711390720"]) .overflow__993fa:after,
+.userInfo__83819:has([src*="1113581633711390720"]) .headerText_bd68ec:after,
+.userInfo__83819:has([src*="1113581633711390720"]) .username__267df:after,
+.userInfo__83819:has([src*="1113581633711390720"]) .titleWrapper_d6133e>h1>div:after {
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    align-items: center;
+    content: "Theme Creator";
+    text-transform: uppercase;
+    border: 1px solid rgb(94, 91, 91);
+    padding: 0 4px;
+    background-image: url(https://cdn.oxmc.me/uploads/images/transgender_flag.png);
+    background-size: contain;
+    background-color: var(--brand-experiment-50a);
+    font-size: 10px;
+    height: 15px;
+    border-radius: 4px;
+    margin: auto 0 auto 4px;
+    text-decoration: none !important;
+    color: var(--interactive-active);
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+}

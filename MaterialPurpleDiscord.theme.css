@@ -142,44 +142,6 @@ div[class="content_e40c16"]>* {
     display: none;
 }
 
-/* Custom user badges (used for friends, replace "user-handle" with the user you'd like the badge on) */
-[aria-label="user-handle"] .badgeList-2aoHPw::after,
-[aria-label="user-handle"] .profileBadges_f89da9::before,
-[aria-label="user-handle"] .badges-XRnWAp::after,
-[aria-label="user-handle"] .badgeList-2aoHPw::after,
-[aria-label="user-handle"] .profileBadges_f89da9::before,
-[aria-label="user-handle"] .badges-XRnWAp::after,
-[aria-label="user-handle"] .badgeList-2aoHPw::after,
-[aria-label="user-handle"] .profileBadges_f89da9::before,
-[aria-label="user-handle"] .badges-XRnWAp::after {
-    content: "";
-    position: relative;
-    right: 0px;
-    top: 0px;
-    width: 22px;
-    height: 22px;
-    background: url(https://static-00.iconduck.com/assets.00/red-heart-emoji-512x470-p3ffpmmg.png) center / 100% 100%;
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-[aria-label="user-handle"] .profileBadges_f89da9:hover::after,
-[aria-label="user-handle"] .profileBadges_f89da9:hover::after,
-[aria-label="user-handle"] .profileBadges_f89da9:hover::after {
-    content: "Cool Friend :3";
-    position: absolute;
-    display: flex;
-    color: var(--text-normal);
-    font-weight: 600;
-    font-size: 10pt;
-    z-index: 999;
-    transform: translateY(-40px) translateX(10px);
-    padding: 10px 12px;
-    border-radius: 4px;
-    box-shadow: var(--elevation-high);
-    background-color: var(--background-floating);
-}
-
 /* Theme Creator Badge */
 .repliedMessage_ec86aa:has([src*="1113581633711390720"]) .username_ec86aa,
 .member_a31c43:has([src*="1113581633711390720"]) .username_d272d6,
